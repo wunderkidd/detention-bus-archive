@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#172cff">
+<meta name="description" content="MOAT Detention Bus Archive — a public archive of reported detention-bus sightings and documented protest transport in Delhi and across India.">
+<title>MOAT Detention Bus Archive — हिरासत की बसें</title>
+<style>
+:root{--blue:#172cff;--red:#ef3529;--yellow:#ffd21c;--paper:#f4eddf;--cream:#fff8ed;--ink:#111;--muted:#5c564e;--line:rgba(17,17,17,.18);--max:1400px;--shadow:7px 7px 0 rgba(17,17,17,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Helvetica Neue",Arial,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}button,input,select,textarea{font:inherit}.impact{font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;font-weight:900;letter-spacing:-.025em}.dev{font-family:"Kohinoor Devanagari","Noto Sans Devanagari","Nirmala UI","Mangal",Arial,sans-serif}.mono{font-family:"SFMono-Regular",Menlo,Consolas,monospace}.hidden{display:none!important}
+.site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 20px;background:rgba(244,237,223,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}.brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap;text-decoration:none}.brand-badge{padding:8px 10px;background:var(--blue);color:var(--yellow);border:2px solid var(--ink);line-height:1}.brand-sub{font-size:13px;font-weight:900}.site-nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-weight:850}.site-nav a{text-decoration:none}.site-nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px}.nav-report{padding:10px 14px;background:var(--red);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 rgba(0,0,0,.18)}.menu-button{display:none;border:2px solid var(--ink);background:var(--yellow);padding:10px 12px;font-weight:900}
+.view{display:none}.view.active{display:block}.shell{max-width:var(--max);margin:auto;padding:38px 20px 56px}.page-head{display:grid;grid-template-columns:260px 1fr;gap:34px;align-items:start;padding-bottom:32px;border-bottom:2px solid var(--ink)}.page-kicker{display:inline-block;background:var(--blue);color:var(--yellow);border:2px solid var(--ink);padding:8px 12px;font-size:12px;font-weight:900;box-shadow:4px 4px 0 rgba(0,0,0,.14)}.page-head h1{margin:0;font-size:clamp(46px,6vw,88px);line-height:.96;letter-spacing:-.045em}.page-head p{max-width:850px;margin:18px 0 0;font-size:19px;line-height:1.68;color:#302d28}
+.hero{background:var(--blue);color:#fff;border-bottom:2px solid var(--ink)}.hero-inner{max-width:var(--max);margin:auto;padding:26px 20px 30px}.hero-tag{display:inline-block;background:var(--yellow);color:var(--ink);border:2px solid var(--ink);padding:8px 12px;font-size:12px;font-weight:900;box-shadow:4px 4px 0 rgba(0,0,0,.18)}.hero-title{margin:28px 0 0;color:var(--yellow);font-size:clamp(56px,8.5vw,122px);line-height:.84;letter-spacing:-.055em;text-shadow:4px 4px 0 var(--red),7px 7px 0 rgba(17,17,17,.78);white-space:nowrap}.hero-question{display:inline-block;margin:20px 0 0;background:var(--red);color:var(--yellow);border:2px solid var(--ink);padding:9px 14px;font-size:clamp(24px,3.2vw,46px);line-height:1.08;font-weight:900;box-shadow:6px 6px 0 rgba(0,0,0,.18)}.hero h2{max-width:980px;margin:24px 0 0;font-size:clamp(28px,3.2vw,48px);line-height:1;text-transform:uppercase;color:#fff6cc}.hero-copy{max-width:820px;margin:14px 0 0;font-size:17px;line-height:1.55;color:#fff7e7}.hero-actions,.action-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.button{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 18px;border:2px solid var(--ink);font-weight:900;text-decoration:none;box-shadow:5px 5px 0 rgba(0,0,0,.18);cursor:pointer;background:var(--cream);color:var(--ink)}.button:hover{transform:translate(-1px,-1px);box-shadow:7px 7px 0 rgba(0,0,0,.18)}.button:active{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(0,0,0,.18)}.button.red{background:var(--red);color:#fff}.button.yellow{background:var(--yellow)}.button.blue{background:var(--blue);color:#fff}.button.small{min-height:40px;padding:0 12px;font-size:13px}.button.ghost{background:transparent;box-shadow:none}.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}.stat{min-height:112px;padding:14px;background:var(--yellow);color:var(--ink);border:2px solid var(--ink);box-shadow:5px 5px 0 rgba(0,0,0,.18);display:flex;flex-direction:column;justify-content:space-between}.stat.note{background:var(--cream)}.stat-num{font-size:50px;line-height:.9}.stat-label{font-size:11px;font-weight:900;text-transform:uppercase;line-height:1.3}.stat-note{font-size:12px;line-height:1.4;color:var(--muted);font-weight:700}
+.home-section{max-width:var(--max);margin:auto;padding:42px 20px 54px}.split{display:grid;grid-template-columns:290px 1fr;gap:34px;border-bottom:2px solid var(--ink);padding-bottom:40px}.split h2,.section-head h2{margin:0;font-size:clamp(34px,4vw,56px);line-height:1.03;letter-spacing:-.035em}.split p{max-width:930px;font-size:19px;line-height:1.72;margin:18px 0 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:22px}.text-link{font-weight:900;text-decoration:none;border-bottom:2px solid var(--ink);cursor:pointer}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.archive-card{background:#fff;border:2px solid var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:390px}.card-top{min-height:190px;background:var(--blue);padding:16px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.card-top:after{content:"";position:absolute;right:-70px;bottom:-100px;width:230px;height:230px;background:var(--red);transform:rotate(32deg);opacity:.24}.chiprow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;position:relative;z-index:1}.chip{display:inline-flex;align-items:center;padding:7px 10px;border:2px solid var(--ink);font-size:10px;text-transform:uppercase;font-weight:900;letter-spacing:.07em;background:var(--yellow)}.chip.verified{background:#cbffd2}.chip.corroborated{background:#ffe8a8}.chip.context{background:#d8defe}.chip.unreviewed{background:#ffb7ae}.card-title{position:relative;z-index:1;background:var(--cream);border:2px solid var(--ink);padding:13px;box-shadow:5px 5px 0 rgba(0,0,0,.16)}.card-title h3{margin:0;font-size:27px;line-height:1.03;letter-spacing:-.03em}.card-body{padding:16px;display:grid;gap:16px;flex:1}.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--muted)}.excerpt{font-size:15px;line-height:1.56;color:#343434}.card-footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:12px;border-top:1px solid var(--line);font-size:11px;font-weight:900;text-transform:uppercase}.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.filters{display:grid;grid-template-columns:minmax(220px,1.7fr) repeat(4,minmax(130px,.7fr));gap:10px;margin:26px 0 14px}.field{display:flex;flex-direction:column;gap:7px}.field label,.field-label{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.field input,.field select,.field textarea{width:100%;border:2px solid var(--ink);background:#fff;padding:11px 12px;border-radius:0;color:var(--ink)}.field textarea{min-height:130px;resize:vertical}.filter-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:24px}.result-count{font-size:13px;font-weight:900;text-transform:uppercase}.empty{border:2px dashed var(--ink);padding:34px;background:rgba(255,255,255,.35);font-size:18px;line-height:1.6}
+.detail-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:34px;margin-top:30px}.detail-main h2{font-size:clamp(38px,5vw,72px);line-height:.98;letter-spacing:-.045em;margin:16px 0}.detail-summary{font-size:20px;line-height:1.65}.fact-grid{border-top:2px solid var(--ink);margin-top:26px}.fact{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}.fact b{font-size:11px;text-transform:uppercase;letter-spacing:.06em}.source-box{border:2px solid var(--ink);background:var(--yellow);padding:18px;box-shadow:var(--shadow);position:sticky;top:100px}.source-box h3{margin:0 0 12px;font-size:25px}.source-box p{font-size:14px;line-height:1.55}.source-box a{word-break:break-word}.record-note{margin-top:28px;background:#fff;border:2px solid var(--ink);padding:20px}.record-note h3{margin:0 0 10px}.record-note p{margin:0;font-size:16px;line-height:1.65}
+.area-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.area-stat{border:2px solid var(--ink);background:var(--yellow);padding:16px;box-shadow:4px 4px 0 rgba(0,0,0,.15)}.area-stat strong{display:block;font-size:34px}.area-index{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.area-card{border:2px solid var(--ink);background:#fff;padding:18px;box-shadow:var(--shadow)}.area-card h3{margin:0 0 8px;font-size:28px}.area-card p{margin:0 0 16px;line-height:1.55;color:#3b3834}.area-records{display:flex;gap:8px;flex-wrap:wrap}.area-pill{border:2px solid var(--ink);background:var(--cream);padding:7px 9px;font-size:11px;font-weight:900;cursor:pointer}.scope-note{margin-top:22px;border-left:6px solid var(--red);padding:14px 16px;background:#fff;font-size:15px;line-height:1.6}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.method-card{border:2px solid var(--ink);background:#fff;padding:20px;box-shadow:var(--shadow)}.method-card .num{font-size:42px;color:var(--blue)}.method-card h3{font-size:26px;margin:12px 0 8px}.method-card p{line-height:1.65;margin:0}.level-table{margin-top:30px;border:2px solid var(--ink);background:#fff}.level-row{display:grid;grid-template-columns:180px 1fr;gap:18px;padding:16px;border-bottom:1px solid var(--line)}.level-row:last-child{border-bottom:0}.level-row strong{font-size:14px;text-transform:uppercase}.principles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.principle{background:var(--blue);color:#fff;padding:22px;border:2px solid var(--ink)}.principle h3{color:var(--yellow);font-size:28px;margin:0 0 8px}.principle p{margin:0;line-height:1.65}
+.form-layout{display:grid;grid-template-columns:300px 1fr;gap:34px;margin-top:28px}.form-guide{border:2px solid var(--ink);background:var(--yellow);padding:18px;align-self:start;position:sticky;top:100px;box-shadow:var(--shadow)}.form-guide h3{font-size:28px;margin:0 0 10px}.form-guide p,.form-guide li{font-size:14px;line-height:1.55}.report-form{background:#fff;border:2px solid var(--ink);padding:20px;box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.span-2{grid-column:1/-1}.hint{font-size:12px;color:var(--muted);line-height:1.45}.form-message{margin-top:16px;padding:14px;border:2px solid var(--ink);display:none}.form-message.show{display:block}.form-message.success{background:#cbffd2}.form-message.error{background:#ffd6d2}.pending-list{margin-top:28px}.pending-item{border:2px solid var(--ink);background:#fff;padding:14px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-top:10px}.pending-item strong{display:block}.pending-item small{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;margin-top:30px}.about-block{border:2px solid var(--ink);background:#fff;padding:22px}.about-block.blue{background:var(--blue);color:#fff}.about-block h2{margin:0 0 12px;font-size:34px}.about-block.blue h2{color:var(--yellow)}.about-block p{font-size:17px;line-height:1.68}.about-block ul{line-height:1.75}.mini-faq{margin-top:30px}.faq-item{border-top:2px solid var(--ink);padding:16px 0}.faq-item:last-child{border-bottom:2px solid var(--ink)}.faq-item h3{margin:0 0 8px}.faq-item p{margin:0;line-height:1.65}
+.site-footer{background:var(--ink);color:#fff7d1}.footer-shell{max-width:var(--max);margin:auto;padding:24px 20px;display:grid;grid-template-columns:1fr 1fr auto;gap:22px;align-items:start}.footer-note{font-size:14px;line-height:1.6;color:#ded7b6}.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-weight:900}.footer-links a{color:var(--yellow);text-decoration:none}
+.toast{position:fixed;right:18px;bottom:18px;z-index:200;background:var(--ink);color:#fff;padding:13px 16px;border:2px solid var(--yellow);max-width:340px;box-shadow:5px 5px 0 rgba(0,0,0,.18);display:none}.toast.show{display:block}
+@media(max-width:1100px){.page-head,.split,.detail-layout,.form-layout,.about-grid,.footer-shell{grid-template-columns:1fr}.hero-stats,.area-summary{grid-template-columns:repeat(2,1fr)}.cards-grid,.area-index,.method-grid{grid-template-columns:repeat(2,1fr)}.principles{grid-template-columns:1fr}.form-guide,.source-box{position:static}.filters{grid-template-columns:1fr 1fr 1fr}.filters .search-field{grid-column:1/-1}}
+@media(max-width:760px){.menu-button{display:inline-flex}.site-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:16px 20px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);flex-direction:column;align-items:flex-start}.site-nav.open{display:flex}.site-header,.hero-inner,.shell,.home-section,.footer-shell{padding-left:15px;padding-right:15px}.hero-title{font-size:clamp(50px,14vw,80px);line-height:.9}.hero-question{font-size:clamp(20px,7vw,32px)}.hero-copy{font-size:17px}.hero h2{font-size:clamp(30px,9vw,42px)}.hero-stats,.area-summary,.cards-grid,.area-index,.method-grid,.form-grid,.filters{grid-template-columns:1fr}.filters .search-field{grid-column:auto}.page-head h1{font-size:clamp(42px,12vw,64px)}.meta,.fact,.level-row{grid-template-columns:1fr}.card-title h3{font-size:23px}.pending-item{grid-template-columns:1fr}}
+
+/* PRIMARY REPORTING DESK */
+.report-hub{max-width:var(--max);margin:0 auto;padding:68px 20px 78px}
+.report-hub-head{display:grid;grid-template-columns:270px 1fr;gap:34px;align-items:start;margin-bottom:28px}
+.report-hub-head h2{margin:0;font-size:clamp(48px,6.5vw,94px);line-height:.94;letter-spacing:-.05em}
+.report-hub-head p{max-width:900px;margin:18px 0 0;font-size:21px;line-height:1.65}
+.report-hub-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(440px,.92fr);gap:24px;align-items:stretch}
+.quick-report{background:#fff;border:2px solid var(--ink);box-shadow:var(--shadow);padding:24px}
+.quick-report .form-grid{grid-template-columns:1fr 1fr}
+.quick-report textarea{min-height:150px}
+.quick-report-note{display:flex;gap:10px;align-items:flex-start;margin:0 0 20px;padding:12px 14px;background:var(--yellow);border:2px solid var(--ink);font-size:13px;line-height:1.5;font-weight:700}
+.sightings-map{position:relative;min-height:760px;background:var(--blue);border:2px solid var(--ink);box-shadow:var(--shadow);overflow:hidden;color:#fff}
+.map-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:38px 38px}
+.delhi-shape{position:absolute;left:11%;top:8%;width:77%;height:82%;background:#f4eddf;clip-path:polygon(38% 0,58% 4%,67% 12%,72% 21%,82% 28%,90% 41%,86% 55%,94% 67%,85% 80%,69% 87%,59% 100%,42% 94%,31% 84%,16% 82%,10% 69%,2% 58%,8% 44%,4% 31%,17% 21%,25% 8%);border:3px solid var(--ink);filter:drop-shadow(8px 8px 0 rgba(0,0,0,.18))}
+.map-title{position:absolute;left:18px;top:18px;z-index:4;background:var(--yellow);color:var(--ink);border:2px solid var(--ink);padding:9px 11px;font-size:12px;font-weight:900;box-shadow:4px 4px 0 rgba(0,0,0,.18)}
+.map-sub{position:absolute;left:18px;top:66px;z-index:4;max-width:260px;font-size:12px;line-height:1.5;color:#fff7cc}
+.map-marker{position:absolute;z-index:5;width:23px;height:23px;border-radius:50%;border:3px solid var(--ink);background:var(--red);box-shadow:3px 3px 0 rgba(0,0,0,.25);cursor:pointer;transform:translate(-50%,-50%)}
+.map-marker:hover,.map-marker:focus{width:29px;height:29px;outline:3px solid var(--yellow)}
+.map-marker.context{background:var(--yellow)}
+.map-marker::after{content:attr(data-label);position:absolute;left:15px;top:13px;white-space:nowrap;background:rgba(255,248,237,.96);color:var(--ink);border:2px solid var(--ink);padding:5px 7px;font-size:10px;font-weight:900;box-shadow:3px 3px 0 rgba(0,0,0,.14)}
+.map-legend{position:absolute;left:18px;bottom:18px;z-index:5;background:rgba(17,17,17,.9);padding:10px 12px;border:2px solid var(--yellow);font-size:11px;line-height:1.55}
+.map-legend b{color:var(--yellow)}
+.map-preview{position:absolute;z-index:6;width:20px;height:20px;border-radius:50%;border:3px solid var(--ink);background:#fff;box-shadow:0 0 0 5px var(--red);transform:translate(-50%,-50%);display:none}
+.map-preview.show{display:block}
+.map-preview-label{position:absolute;z-index:7;right:16px;bottom:16px;max-width:250px;background:var(--cream);color:var(--ink);border:2px solid var(--ink);padding:10px 12px;font-size:12px;line-height:1.45;display:none}
+.map-preview-label.show{display:block}
+.map-page-wrap{margin-top:28px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:22px}
+.map-page-wrap .sightings-map{min-height:720px}
+.map-side-list{display:grid;gap:12px;align-content:start}
+.map-record-row{border:2px solid var(--ink);background:#fff;padding:14px;box-shadow:4px 4px 0 rgba(0,0,0,.12)}
+.map-record-row strong{display:block;font-size:18px;line-height:1.15;margin-bottom:6px}.map-record-row span{font-size:12px;color:var(--muted)}
+@media(max-width:1100px){.report-hub-head,.report-hub-grid,.map-page-wrap{grid-template-columns:1fr}.sightings-map,.map-page-wrap .sightings-map{min-height:600px}}
+@media(max-width:760px){.report-hub{padding-left:15px;padding-right:15px}.report-hub-head h2{font-size:clamp(42px,12vw,64px)}.report-hub-head p{font-size:18px}.quick-report .form-grid{grid-template-columns:1fr}.sightings-map,.map-page-wrap .sightings-map{min-height:540px}.map-marker::after{font-size:9px;max-width:120px;white-space:normal}.map-sub{max-width:200px}}
+
+
+/* INDIA + CITY MAP — SELF-CONTAINED, NO MAP TILES */
+.map-shell{display:flex;flex-direction:column;min-width:0}
+.map-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px;border:2px solid var(--ink);border-bottom:0;background:var(--yellow);color:var(--ink)}
+.map-toolbar-label{font-size:11px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-right:2px;color:var(--ink)}
+.map-region-buttons{display:flex;gap:7px;flex-wrap:wrap}
+.map-scope{appearance:none;border:2px solid #111;background:#fff3c0;color:#111!important;padding:7px 10px;font-size:11px;font-weight:900;cursor:pointer;box-shadow:2px 2px 0 rgba(0,0,0,.14)}
+.map-scope:hover{background:#fff}.map-scope.active{background:var(--blue);color:#fff!important}
+.sightings-map.archive-map{position:relative;min-height:650px;background:#dbe4d8;color:var(--ink);border:2px solid var(--ink);box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
+.report-hub-grid .sightings-map.archive-map{min-height:760px}
+.archive-map svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.archive-map-bg{fill:#d4ddd0}.archive-map-grid{stroke:rgba(17,17,17,.14);stroke-width:1}.archive-map-country{fill:#fff1c9;stroke:#111;stroke-width:6;vector-effect:non-scaling-stroke;filter:drop-shadow(8px 8px 0 rgba(17,17,17,.12))}
+.archive-map-local-shape{fill:#fff3c0;stroke:var(--ink);stroke-width:5;vector-effect:non-scaling-stroke;filter:drop-shadow(8px 8px 0 rgba(17,17,17,.12))}
+.archive-map-water{fill:var(--blue);opacity:.08}.archive-map-big-label{font-size:82px;font-weight:900;fill:rgba(17,17,17,.08);letter-spacing:-3px}.archive-map-kicker{font-size:20px;font-weight:900;fill:var(--ink);letter-spacing:2px}
+.archive-map-cluster,.archive-map-pin{position:absolute;z-index:4;transform:translate(-50%,-50%);appearance:none;border:0;background:transparent;padding:0;cursor:pointer;color:var(--ink)}
+.archive-map-cluster-dot{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:3px solid var(--ink);background:var(--red);color:#fff;font-weight:900;font-size:14px;box-shadow:4px 4px 0 rgba(0,0,0,.22)}
+.archive-map-cluster-label{position:absolute;left:30px;top:-5px;min-width:max-content;background:#fff3c0;border:2px solid #111;padding:6px 8px;font-size:11px;font-weight:900;color:var(--ink);box-shadow:3px 3px 0 rgba(0,0,0,.14);white-space:nowrap}
+.archive-map-cluster.align-left .archive-map-cluster-label{left:auto;right:30px}.archive-map-cluster:hover .archive-map-cluster-dot,.archive-map-cluster:focus .archive-map-cluster-dot{outline:4px solid var(--yellow)}
+.archive-map-pin-dot{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:3px solid var(--ink);background:var(--red);color:#fff;font-size:10px;font-weight:900;box-shadow:3px 3px 0 rgba(0,0,0,.22)}
+.archive-map-pin.verified .archive-map-pin-dot{background:#4bbb62}.archive-map-pin.corroborated .archive-map-pin-dot{background:#e4a923;color:#111}.archive-map-pin.context .archive-map-pin-dot{background:var(--yellow);color:#111}.archive-map-pin.unreviewed .archive-map-pin-dot{background:#ff8d80;color:#111}
+.archive-map-pin-label{position:absolute;left:24px;top:-2px;max-width:180px;background:#fff;border:2px solid var(--ink);padding:5px 7px;font-size:10px;font-weight:900;line-height:1.25;color:var(--ink);box-shadow:3px 3px 0 rgba(0,0,0,.12);text-align:left;white-space:normal}
+.archive-map-pin.align-left .archive-map-pin-label{left:auto;right:24px;text-align:right}
+.archive-map-empty{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;background:#fff;border:2px solid var(--ink);padding:16px;font-weight:900;color:var(--ink);box-shadow:5px 5px 0 rgba(0,0,0,.15)}
+.archive-map-status{position:absolute;z-index:3;left:16px;top:16px;background:#ffd21c;border:2px solid #111;padding:8px 10px;font-size:11px;font-weight:900;color:var(--ink);box-shadow:3px 3px 0 rgba(0,0,0,.14)}
+.archive-map-legend{position:absolute;z-index:3;left:16px;bottom:16px;background:rgba(255,255,255,.96);border:2px solid var(--ink);padding:8px 10px;font-size:10px;line-height:1.5;font-weight:800;color:var(--ink);box-shadow:3px 3px 0 rgba(0,0,0,.12)}
+.archive-map-preview{position:absolute;z-index:6;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;border:4px solid var(--ink);background:#fff;box-shadow:0 0 0 6px var(--red)}
+.map-note{border:2px solid var(--ink);border-top:0;background:#fff;padding:10px 12px;font-size:12px;line-height:1.5;color:#403c36}
+.map-page-wrap{align-items:start}.map-page-wrap .map-shell{min-width:0}
+.map-region-title{font-size:13px;font-weight:900;text-transform:uppercase;margin:0 0 4px}.map-record-row.active-region{background:var(--yellow)}
+@media(max-width:1100px){.report-hub-grid .sightings-map.archive-map,.sightings-map.archive-map{min-height:570px}.archive-map-cluster-label{font-size:10px}}
+@media(max-width:760px){.report-hub-grid .sightings-map.archive-map,.sightings-map.archive-map{min-height:500px}.map-toolbar{padding:8px}.map-scope{padding:7px 8px;font-size:10px}.archive-map-cluster-dot{width:36px;height:36px}.archive-map-cluster-label{left:22px;max-width:120px;min-width:0;white-space:normal}.archive-map-cluster.align-left .archive-map-cluster-label{right:22px}.archive-map-pin-label{display:none}.archive-map-big-label{font-size:58px}.archive-map-legend{max-width:210px}}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* LIVE BACKEND: paste your Supabase Project URL and publishable/anon key here when deploying. */
+window.MOAT_BACKEND = window.MOAT_BACKEND || {
+  supabaseUrl: 'https://nahzbmaerxddrsaamszo.supabase.co',
+  supabaseAnonKey: 'sb_publishable_ZXUQFdtCOKZu4T1AEXrWqg_V8CitT9M'
+};
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" data-route="home" aria-label="MOAT Detention Bus Archive home"><span class="brand-badge impact">MOAT</span><span class="brand-sub impact">DETENTION BUS ARCHIVE</span><span class="brand-sub dev">प्रदर्शन से हिरासत तक</span></a>
+  <button class="menu-button" id="menuButton" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+  <nav class="site-nav" id="siteNav">
+    <a href="#archive" data-route="archive">Archive</a>
+    <a href="#map" data-route="map">India Map</a>
+    <a href="#method" data-route="method">How it works</a>
+    <a href="#about" data-route="about">About</a>
+    <a class="nav-report" href="#report" data-route="report">Report a bus</a>
+  </nav>
+</header>
+<main>
+<section class="view active" id="view-home">
+  <div class="hero"><div class="hero-inner">
+    <span class="hero-tag impact">MOAT PUBLIC-INTEREST PROJECT</span>
+    <h1 class="hero-title dev">हिरासत की बसें</h1>
+    <div class="hero-question dev">प्रदर्शनकारी किस बस में ले जाए गए?</div>
+    <h2 class="impact">WHEN PROTESTERS ARE MOVED, THE BUS IS PART OF THE RECORD.</h2>
+    <p class="hero-copy">A public archive of reported detention-bus sightings and documented protest transport in Delhi and across India. Source-linked, searchable and retrospective.</p>
+    <div class="hero-actions"><a class="button red" href="#archive">Explore the archive →</a><a class="button yellow" href="#map">Open India map</a><a class="button" href="#report">Report a detention bus</a></div>
+  </div></div>
+  <section class="report-hub" id="report-now">
+    <div class="report-hub-head"><div><span class="page-kicker impact">REPORT A BUS</span></div><div><h2>Saw a detention bus?</h2><p>Tell us where and when you spotted the bus and what you saw. Add a photo/video, source link or bus/fleet number when you have one. Reports that pass basic completeness and spam checks may appear immediately as <b>UNREVIEWED COMMUNITY REPORTS</b>. Uploaded evidence and contact details remain private.</p></div></div>
+    <div class="report-hub-grid">
+      <form class="quick-report" id="homeReportForm">
+        <div class="quick-report-note"><span>●</span><span><b>Unreviewed does not mean verified.</b> Be specific about what you saw. Do not add private details about ordinary protesters, and do not guess a bus identity from colour alone.</span></div>
+        <div class="form-grid">
+          <div class="field"><label for="homeReportDate">Date *</label><input id="homeReportDate" name="observed_date" type="date" required></div>
+          <div class="field"><label for="homeReportLocation">Where was it? *</label><input id="homeReportLocation" name="location_name" required placeholder="Jantar Mantar, Mumbai, Chhatarpur…" autocomplete="off"></div>
+          <div class="field"><label for="homeReportOperator">Operator / bus type</label><input id="homeReportOperator" name="operator" placeholder="DTC, tourist bus, unknown…"></div>
+          <div class="field"><label for="homeReportFleet">Fleet / registration number</label><input id="homeReportFleet" name="fleet_number" placeholder="Only if clearly visible"></div>
+          <div class="field span-2"><label for="homeReportWhat">What did you see? *</label><textarea id="homeReportWhat" name="description" required placeholder="What was the bus doing? What can be established from the photo, video or report?"></textarea></div>
+          <div class="field span-2"><label for="homeReportSource">Original source URL</label><input id="homeReportSource" name="source_url" type="url" placeholder="https://…"><span class="hint">Article, post, reel, video, thread or other public source.</span></div>
+          <div class="field"><label for="homeReportSourceName">Source name</label><input id="homeReportSourceName" name="source_name" placeholder="Publication / account"></div>
+          <div class="field"><label for="homeReportFile">Photo or video</label><input id="homeReportFile" name="media" type="file" accept="image/*,video/*"><span class="hint">Uploads are kept private. The public record shows only a neutral summary, approximate location and any bus/fleet number supplied.</span></div>
+          <div class="field span-2"><label for="homeReportContact">Contact (optional)</label><input id="homeReportContact" name="contact" placeholder="Email / handle if you want follow-up"></div>
+          <input type="hidden" name="related_record" value="">
+        </div>
+        <div class="action-row"><button class="button red" type="submit">Publish report</button><button class="button ghost" type="reset">Clear</button><a class="button yellow" href="#method">How reports are labelled</a></div>
+        <div class="form-message" data-form-message role="status"></div>
+      </form>
+      <div class="map-shell">
+        <div class="map-toolbar"><span class="map-toolbar-label">Map view</span><div class="map-region-buttons" data-map-controls="homeSightingsMap">
+          <button type="button" class="map-scope active" data-map-target="homeSightingsMap" data-map-scope="india">India</button>
+          <button type="button" class="map-scope" data-map-target="homeSightingsMap" data-map-scope="delhi">Delhi</button>
+          <button type="button" class="map-scope" data-map-target="homeSightingsMap" data-map-scope="mumbai">Mumbai</button>
+          <button type="button" class="map-scope" data-map-target="homeSightingsMap" data-map-scope="punjab">Punjab</button>
+          <button type="button" class="map-scope" data-map-target="homeSightingsMap" data-map-scope="haryana">Haryana</button>
+          <button type="button" class="map-scope" data-map-target="homeSightingsMap" data-map-scope="madhya">Madhya Pradesh</button>
+          <button type="button" class="map-scope" data-map-target="homeSightingsMap" data-map-scope="jammu">Jammu &amp; Kashmir</button>
+        </div></div>
+        <div class="sightings-map archive-map" id="homeSightingsMap" aria-label="Approximate India detention-bus sightings map"></div>
+        <div class="map-note"><b>Approximate + retrospective.</b> The India outline and region labels are always visible. Click Delhi, Mumbai or another region to see its records more clearly. Fresh reports never expose a live route or precise operational location.</div>
+      </div>
+    </div>
+  </section>
+  <section class="home-section"><div class="section-head"><div><span class="page-kicker impact">FROM THE ARCHIVE</span><h2>Recent records</h2></div><a class="text-link" href="#archive">See every record →</a></div><div class="cards-grid" id="homeCards"></div></section>
+</section>
+
+<section class="view" id="view-archive"><div class="shell">
+  <div class="page-head"><div><span class="page-kicker impact">ARCHIVE</span></div><div><h1>Detention bus records</h1><p>Search by place, event, operator, year or source. <b>Unreviewed</b> means we have not checked it yet. <b>Verified</b> means there is clear supporting evidence. <b>Corroborated</b> means the report is well supported but one detail is still unclear. <b>Context</b> is related background, not a detention-bus sighting.</p></div></div>
+  <div class="filters">
+    <div class="field search-field"><label for="searchInput">Search</label><input id="searchInput" type="search" placeholder="Jantar Mantar, DTC, Red Fort…"></div>
+    <div class="field"><label for="yearFilter">Year</label><select id="yearFilter"><option value="">All years</option></select></div>
+    <div class="field"><label for="operatorFilter">Operator</label><select id="operatorFilter"><option value="">All operators</option></select></div>
+    <div class="field"><label for="levelFilter">Evidence</label><select id="levelFilter"><option value="">All levels</option><option value="unreviewed">Unreviewed</option><option value="verified">Verified</option><option value="corroborated">Corroborated</option><option value="context">Context</option></select></div>
+    <div class="field"><label for="sortFilter">Sort</label><select id="sortFilter"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="place">Place A–Z</option></select></div>
+  </div>
+  <div class="filter-tools"><span class="result-count" id="archiveCount"></span><div class="action-row" style="margin:0"><button class="button small ghost" id="resetFilters">Reset filters</button><button class="button small yellow" id="exportCsv">Export CSV</button><button class="button small" id="exportJson">Export JSON</button></div></div>
+  <div class="cards-grid" id="archiveCards"></div>
+</div></section>
+
+<section class="view" id="view-record"><div class="shell" id="recordContent"></div></section>
+
+<section class="view" id="view-map"><div class="shell">
+  <div class="page-head"><div><span class="page-kicker impact">MAP</span></div><div><h1>Where have detention buses been reported?</h1><p>An India-wide, retrospective map of archive records. Start with India, then press <b>Delhi</b>, <b>Mumbai</b> or another region to zoom in and clearly see the records there. Locations are deliberately approximate.</p></div></div>
+  <div class="map-page-wrap"><div class="map-shell">
+    <div class="map-toolbar"><span class="map-toolbar-label">Zoom to</span><div class="map-region-buttons" data-map-controls="fullSightingsMap">
+      <button type="button" class="map-scope active" data-map-target="fullSightingsMap" data-map-scope="india">India</button>
+      <button type="button" class="map-scope" data-map-target="fullSightingsMap" data-map-scope="delhi">Delhi</button>
+      <button type="button" class="map-scope" data-map-target="fullSightingsMap" data-map-scope="mumbai">Mumbai</button>
+      <button type="button" class="map-scope" data-map-target="fullSightingsMap" data-map-scope="punjab">Punjab</button>
+      <button type="button" class="map-scope" data-map-target="fullSightingsMap" data-map-scope="haryana">Haryana</button>
+      <button type="button" class="map-scope" data-map-target="fullSightingsMap" data-map-scope="madhya">Madhya Pradesh</button>
+      <button type="button" class="map-scope" data-map-target="fullSightingsMap" data-map-scope="jammu">Jammu &amp; Kashmir</button>
+    </div></div>
+    <div class="sightings-map archive-map" id="fullSightingsMap" aria-label="Approximate India detention-bus archive map"></div>
+    <div class="map-note">Pins identify broad reported locations only. The map is built into this file, so the outline and labels remain visible even if external map tiles fail. It does not show live positions or routes.</div>
+  </div><div class="map-side-list" id="mapRecordList"></div></div>
+  <div class="area-summary" id="areaSummary"></div>
+  <div class="area-index" id="areaIndex"></div>
+  <div class="scope-note"><b>Why approximate?</b> The archive is designed for retrospective documentation. It does not publish live positions, routes, or precise detention movements.</div>
+</div></section>
+
+<section class="view" id="view-method"><div class="shell">
+  <div class="page-head"><div><span class="page-kicker impact">HOW IT WORKS</span></div><div><h1>How a report gets on the site</h1><p>Simple: someone sends a report, the site checks that it is usable, and it can appear as <b>Unreviewed</b>. MOAT checks stronger claims later.</p></div></div>
+  <div class="method-grid">
+    <div class="method-card"><span class="num impact">01</span><h3>Someone reports it</h3><p>We ask for where it was seen, when it was seen and what happened. A photo, source link or bus number helps, but not every field is compulsory.</p></div>
+    <div class="method-card"><span class="num impact">02</span><h3>The site does a basic check</h3><p>It blocks obvious spam, empty reports and exact duplicates. This is only a quick check. It does <b>not</b> prove the report is true.</p></div>
+    <div class="method-card"><span class="num impact">03</span><h3>MOAT reviews it later</h3><p>We can correct or remove weak entries. If good evidence exists, the label can change to <b>Corroborated</b> or <b>Verified</b>.</p></div>
+  </div>
+  <div class="level-table">
+    <div class="level-row"><strong>Unreviewed</strong><span>A public submission that MOAT has not checked yet.</span></div>
+    <div class="level-row"><strong>Verified</strong><span>Clear reporting, photos or video confirm the bus was used in a detention-related incident.</span></div>
+    <div class="level-row"><strong>Corroborated</strong><span>There is good supporting evidence, but one detail is still unclear.</span></div>
+    <div class="level-row"><strong>Context</strong><span>Useful related information, but not enough to call it a detention-bus sighting.</span></div>
+  </div>
+  <div class="principles"><div class="principle"><h3>We do not guess</h3><p>If a bus number, operator or exact detail is unclear, the site says so instead of filling in the gap.</p></div><div class="principle"><h3>No live tracking</h3><p>The map shows approximate, retrospective locations. It does not show live routes, exact movements or private details about protesters.</p></div></div>
+</div></section>
+
+<section class="view" id="view-about"><div class="shell">
+  <div class="page-head"><div><span class="page-kicker impact">ABOUT</span></div><div><h1>Why document detention buses?</h1><p>Buses are usually understood as ordinary transport infrastructure. This archive documents the moments when buses are instead reported or documented as part of protest detention operations, and keeps the evidence, uncertainty and context visible.</p></div></div>
+  <div class="about-grid">
+    <div class="about-block blue"><h2>What MOAT is recording</h2><p>MOAT Detention Bus Archive is a civic archive by Ministry of All Transport Ever. Its primary subject is buses used to detain or transport protesters across India, with Delhi as the most detailed current collection and other cities and states added as evidence is found or submitted.</p><p>The archive is built around records, not rhetoric: a date, an approximate place, a description, a source and an evidence status.</p></div>
+    <div class="about-block"><h2>What it is not</h2><ul><li>Not a live police tracker.</li><li>Not a database of individual protesters.</li><li>Not a claim that every police bus is removed from scheduled passenger service.</li><li>Not a substitute for original reporting or legal records.</li></ul></div>
+  </div>
+  <div class="mini-faq"><div class="faq-item"><h3>Why include source links?</h3><p>So every public claim can be checked against the reporting or footage it came from.</p></div><div class="faq-item"><h3>Can an entry be corrected?</h3><p>Yes. Open a record and use “Suggest a correction”. The report form opens with that record already referenced, so your correction is submitted against the right entry. It does not silently edit the public record.</p></div><div class="faq-item"><h3>Why no exact coordinates?</h3><p>The public-interest value is retrospective documentation, not real-time operational tracking.</p></div></div>
+</div></section>
+
+<section class="view" id="view-report"><div class="shell">
+  <div class="page-head"><div><span class="page-kicker impact">REPORT A BUS</span></div><div><h1>Report a detention-bus sighting</h1><p>Submit what you observed or found. Be precise about what is visible and leave fields blank when you do not know. A qualifying report may appear immediately as an <b>Unreviewed Community Report</b>.</p></div></div>
+  <div class="form-layout">
+    <aside class="form-guide"><h3>Good submissions are boringly specific.</h3><p>Useful details:</p><ul><li>date or approximate date</li><li>neighbourhood or landmark</li><li>bus/operator marking if visible</li><li>original post, video or article</li><li>what the bus was doing</li></ul><p><b>Do not include</b> private personal details about ordinary protesters.</p></aside>
+    <div>
+      <form class="report-form" id="reportForm">
+        <div class="form-grid">
+          <div class="field"><label for="reportDate">Date *</label><input id="reportDate" name="observed_date" type="date" required></div>
+          <div class="field"><label for="reportLocation">Approximate location *</label><input id="reportLocation" name="location_name" required placeholder="e.g. Jantar Mantar / Janpath"></div>
+          <div class="field"><label for="reportOperator">Operator / bus type</label><input id="reportOperator" name="operator" placeholder="DTC, tourist bus, unknown…"></div>
+          <div class="field"><label for="reportFleet">Fleet / registration number</label><input id="reportFleet" name="fleet_number" placeholder="Only if clearly visible"></div>
+          <div class="field span-2"><label for="reportWhat">What happened? *</label><textarea id="reportWhat" name="description" required placeholder="Describe only what you observed or what the source establishes."></textarea></div>
+          <div class="field span-2"><label for="reportSource">Original source URL</label><input id="reportSource" name="source_url" type="url" placeholder="https://…"><span class="hint">A public article, post or video helps verification.</span></div>
+          <div class="field"><label for="reportSourceName">Source / publication name</label><input id="reportSourceName" name="source_name" placeholder="e.g. The Indian Express"></div>
+          <div class="field"><label for="reportFile">Evidence file</label><input id="reportFile" name="media" type="file" accept="image/*,video/*"><span class="hint">Evidence uploads are kept private; public records use only the neutral summary and safe public fields.</span></div>
+          <div class="field span-2"><label for="reportContact">Contact (optional)</label><input id="reportContact" name="contact" placeholder="Email / handle if you want follow-up"></div>
+          <input type="hidden" id="relatedRecord" name="related_record" value="">
+        </div>
+        <div class="action-row"><button class="button red" type="submit" id="submitReport">Publish report</button><button class="button ghost" type="reset">Clear form</button></div>
+        <div class="form-message" id="formMessage" data-form-message role="status"></div>
+      </form>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="footer-shell"><div><strong class="impact">MOAT DETENTION BUS ARCHIVE</strong><p class="footer-note">A civic archive by Ministry of All Transport Ever.</p></div><div class="footer-note">Records are retrospective, source-linked and deliberately approximate. This site does not provide live operational tracking.</div><div class="footer-links"><a href="#method">Verification</a><a href="#report">Submit</a><a href="#about">About</a><a href="#report">Correction / removal request</a></div></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+// Weekly moderation overrides live here. Ask ChatGPT to update these IDs, then re-upload index.html to GitHub.
+// Examples: {'community-UUID':{hidden:true}} or {'community-UUID':{level:'verified',fleet_number:'DL…'}}
+const MODERATION_OVERRIDES={};
+
+const RECORDS=[
+{id:1,title:'Anti-CEC protesters moved across Delhi in more than 33 buses',date:'2026-10-02',location:'Jantar Mantar / Central Delhi',area:'Central Delhi',operator:'Delhi Police / arranged buses',purpose:'Detention transport',level:'verified',source:'The Tribune',sourceUrl:'https://www.tribuneindia.com/news/delhi/over-1k-detained-in-delhi-as-protesters-demand-cecs-exit/',summary:'Reporting from the anti-CEC protest said more than 1,000 people were detained in more than 33 buses across Delhi, with detainees taken to multiple locations away from central Delhi.',evidence:'The report explicitly states that more than 1,000 people were detained in more than 33 buses and describes detainees being moved to locations including outer Delhi.'},
+{id:2,title:'Jantar Mantar anti-CEC protesters taken away in police buses',date:'2026-10-02',location:'Jantar Mantar / Ashoka Road',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'Hindustan Times',sourceUrl:'https://www.hindustantimes.com/india-news/500-detained-internet-cut-clips-from-police-buses-high-drama-in-delhi-as-jantar-mantar-sees-protests-again-aap-aisa-neha-bora-gyanesh-kumar-cjp-101790928111590.html',summary:'Police detained hundreds of protesters trying to reach Jantar Mantar and moved groups away in buses during demonstrations over the Election Commission and electoral-roll revision.',evidence:'The report directly says protesters stopped near the Ashoka Road side were taken away in buses and includes accounts and clips from inside police buses.'},
+{id:3,title:'Police bus used during anti-CEC protest outside Jantar Mantar',date:'2026-10-03',location:'Jantar Mantar',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'India Today',sourceUrl:'https://www.indiatoday.in/newsmo/short-videos/what-happened-outside-jantar-mantar-during-anti-cec-protest-3008906-2026-10-03',summary:'Video reporting showed police personnel climbing onto a bus and protesters being taken away in buses during the anti-CEC demonstration.',evidence:'The video report explicitly describes protesters being taken away in buses and shows police action around the vehicle.'},
+{id:4,title:'Buses kept ready for detention during CJP Chalo Sansad march',date:'2026-07-20',location:'Jantar Mantar / Parliament Street',area:'Central Delhi',operator:'Delhi Police / police buses',purpose:'Detention staging',level:'context',source:'DT Next',sourceUrl:'https://www.dtnext.in/news/national/chalo-sansad-march-over-neet-ends-with-centre-agreeing-to-hold-talks',summary:'As thousands gathered for the CJP march from Jantar Mantar towards Parliament, buses were kept ready to detain protesters while police imposed heavy security across the area.',evidence:'The source explicitly records buses being kept ready to detain protesters. This entry documents the detention-transport infrastructure, not a claim that every bus carried detainees.'},
+{id:5,title:'CJP Chalo Sansad: detention points spread across New Delhi',date:'2026-07-20',location:'Jantar Mantar / Janpath / Patel Chowk / Mandi House',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention operation',level:'corroborated',source:'Times of India / PTI',sourceUrl:'https://timesofindia.indiatimes.com/city/delhi/cjps-chalo-sansad-march-several-protesters-detained-across-new-delhi/articleshow/132512019.cms',summary:'Protesters were detained at multiple points around New Delhi during the CJP march, including Jantar Mantar, Janpath, Patel Chowk, Mandi House and Parliament Street, and shifted away from the protest area.',evidence:'The source verifies the multi-point detention operation and movement of detainees. Bus deployment for detention is separately documented by contemporaneous reporting in this archive.'},
+{id:6,title:'Congress MPs taken away in buses after detention near PM residence',date:'2026-07-21',location:'New Delhi / PM residence area',area:'New Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'The Indian Express',sourceUrl:'https://indianexpress.com/article/cities/delhi/cjp-protest-news-jantar-mantar-live-updates-security-abhijeet-dipke-sonam-wangchuk-hunger-strike-neet-paper-leak-dharmendra-pradhan-10795901/',summary:'During a protest the day after the CJP march, Delhi Police detained Congress MPs and placed them in buses before moving them away from the protest site.',evidence:'The Indian Express live coverage explicitly states that Congress MPs were placed in buses and moved away after detention.'},
+{id:7,title:'Mumbai student protesters made to board police buses',date:'2026-07-18',location:'Mumbai',area:'Maharashtra',operator:'Mumbai Police',purpose:'Detention transport',level:'verified',source:'Moneycontrol / PTI',sourceUrl:'https://www.moneycontrol.com/news/india/delhi-police-kidnapped-sonam-wangchuk-protest-erupts-in-mumbai-demonstrators-detained-demanding-dharmendra-pradhan-s-resignation-13977434.html',summary:'Students protesting police action against Sonam Wangchuk were detained in Mumbai and made to get onto police buses.',evidence:'PTI visuals and the report directly describe detained demonstrators being made to board police buses.'},
+{id:8,title:'Ken-Betwa protesters packed into buses and sent to Panna',date:'2026-07-19',location:'Kupi village, Chhatarpur district',area:'Madhya Pradesh',operator:'Madhya Pradesh Police',purpose:'Detention transport',level:'verified',source:'The Indian Express',sourceUrl:'https://indianexpress.com/article/india/ken-betwa-protest-leader-amit-bhatnagar-detained-14-day-fast-150-taken-away-10793353/',summary:'Police detained around 150 people during protests over the Ken-Betwa Link Project, packed them into buses and sent them to Panna district.',evidence:'An Additional SP quoted by The Indian Express said around 150 protesters were detained; the report states they were packed into buses and sent to Panna district.'},
+{id:9,title:'Jammu protesters detained and taken away in buses during anti-CEC action',date:'2026-09-25',location:'Jammu',area:'Jammu & Kashmir',operator:'Police',purpose:'Detention transport',level:'verified',source:'Moneycontrol',sourceUrl:'https://www.moneycontrol.com/news/india/gaurav-gogoi-other-leaders-detained-as-congress-protests-against-cec-gyanesh-kumar-spread-nationwide-demanding-resignation-and-arrest-14038395.html',summary:'Scores of protesters were detained during a demonstration outside the Election Commission office in Jammu and taken away in buses.',evidence:'The report directly states that protesters were detained in large numbers and taken away in buses.'},
+{id:10,title:'Manesar farmers moved to Police Lines in two buses',date:'2024-02-20',location:'Manesar, Gurugram',area:'Haryana',operator:'Gurugram Police',purpose:'Detention transport',level:'verified',source:'India Today / PTI',sourceUrl:'https://www.indiatoday.in/india/story/farmers-protest-delhi-chalo-march-land-compensation-50-farmers-detained-gurugram-police-2504802-2024-02-20/',summary:'Around 50 farmers marching towards Delhi over land compensation were detained in Manesar and taken to the Manesar Police Lines in two buses.',evidence:'PTI reporting quotes police saying the detained protesters were taken to the Police Lines in two buses.'},
+{id:11,title:'AAP protesters taken from Patel Chowk in five buses',date:'2024-03-26',location:'Patel Chowk / New Delhi',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'Hindustan Times',sourceUrl:'https://www.hindustantimes.com/india-news/protest-vs-protest-as-hc-to-hear-cm-s-plea-today-101711479132722.html',summary:'AAP workers protesting after Arvind Kejriwal’s arrest were detained around Patel Chowk and taken to police stations in five buses.',evidence:'The report explicitly states that detained workers were taken to various police stations in five buses.'},
+{id:12,title:'AAP ministers and supporters whisked away in buses at ITO',date:'2024-03-22',location:'ITO / DDU Marg',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'The Indian Express',sourceUrl:'https://indianexpress.com/article/cities/delhi/arvind-kejriwal-ed-arrest-delhi-excise-policy-case-aap-protests-9228419/',summary:'During protests following Arvind Kejriwal’s arrest, Atishi, Saurabh Bharadwaj and other demonstrators were detained and moved away in buses.',evidence:'The Indian Express report directly says ministers were whisked away in buses and that 80 people were detained.'},
+{id:13,title:'NEET and UGC-NET protesters shoved into buses outside Shastri Bhawan',date:'2024-06-20',location:'Shastri Bhawan / Central Delhi',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'corroborated',source:'The New Indian Express',sourceUrl:'https://www.newindianexpress.com/india/2024/Jun/21/student-bodies-take-to-the-streets-several-detained',summary:'Student groups protesting alleged NEET irregularities and the UGC-NET cancellation were detained, with visuals showing students being dragged and shoved into buses.',evidence:'The report says social-media visuals showed students being dragged and shoved into buses; police disputed allegations of manhandling but not the detention operation itself.'},
+{id:14,title:'Wrestlers and supporters forcefully boarded into buses',date:'2023-05-28',location:'Jantar Mantar',area:'Central Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'The Indian Express',sourceUrl:'https://indianexpress.com/article/cities/delhi/delhi-police-detain-wrestlers-clear-jantar-mantar-8633887/',summary:'Protesting wrestlers and supporters were detained near Jantar Mantar while trying to march towards the new Parliament building and were forcefully boarded into buses.',evidence:'The Indian Express photo report explicitly states that all protesters were detained and forcefully boarded into buses.'},
+{id:15,title:'AAP protest crackdown: hundreds put into buses across Delhi',date:'2023-04-16',location:'Golf Links / Lodhi Road / Kashmere Gate / ITO',area:'Delhi-wide',operator:'Delhi Police',purpose:'Detention transport',level:'verified',source:'The Indian Express',sourceUrl:'https://indianexpress.com/article/cities/delhi/delhi-police-crackdown-on-protests-by-aap-across-the-city-1350-detained-8559839/',summary:'During protests around the CBI questioning of Arvind Kejriwal, police detained large numbers of AAP workers across Delhi and used buses to remove groups from multiple locations.',evidence:'The report says protesters were put into buses, records four buses used at Kashmere Gate for more than a hundred detainees, and describes bus removals at other sites.'},
+{id:16,title:'Anti-CAA detainees transported by buses to temporary detention sites',date:'2019-12-19',location:'Red Fort / Mandi House',area:'Central Delhi',operator:'Delhi Police / hired buses',purpose:'Detention transport',level:'verified',source:'Times of India',sourceUrl:'https://timesofindia.indiatimes.com/city/delhi/1200-protesters-detained-for-hours-taken-to-stadiums/articleshow/72893339.cms',summary:'During anti-CAA protests, hundreds of detainees were transported in several buses to temporary detention sites, including stadiums.',evidence:'The report directly describes hundreds of detainees being taken in several buses to stadiums and a separate bus detention at Mandi House.'},
+{id:17,title:'Article 370 protesters in Mohali taken out of district in police-arranged buses',date:'2019-09-15',location:'Mohali / Phase VIII',area:'Punjab',operator:'Punjab Police',purpose:'Detention transport',level:'verified',source:'The Indian Express',sourceUrl:'https://indianexpress.com/article/india/article-370-protesters-in-chandigarh-raise-their-voice-but-police-foil-the-agitation-5998344/',summary:'Students and employee-union protesters opposing the removal of Article 370 were detained in Mohali and taken away in buses arranged by police.',evidence:'The Indian Express report states that protesters were put into buses and taken out of the district, including buses arranged by police for employee-union members.'},
+{id:18,title:'Palestine-solidarity protesters shown inside a detention bus',date:'2023-10-23',location:'APJ Abdul Kalam Road',area:'New Delhi',operator:'Delhi Police',purpose:'Detention transport',level:'corroborated',source:'Associated Press / AP Archive',sourceUrl:'https://www.youtube.com/watch?v=g44IZTGru4A',summary:'AP footage from a Palestine-solidarity protest showed detained protesters inside a bus after police action in New Delhi.',evidence:'Video evidence supports detention-bus use. The archive does not infer a specific fleet or registration number beyond what is visible or described by the source.'}
+];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const formatDate=d=>{try{return new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'short',year:'numeric'}).format(new Date(d+'T00:00:00'))}catch{return d}};
+const MAP_POINTS={
+1:{lat:28.6272,lng:77.2167,region:'delhi'},2:{lat:28.6259,lng:77.2148,region:'delhi'},3:{lat:28.6271,lng:77.2166,region:'delhi'},4:{lat:28.6260,lng:77.2158,region:'delhi'},5:{lat:28.6215,lng:77.2195,region:'delhi'},6:{lat:28.5980,lng:77.2040,region:'delhi'},
+7:{lat:19.0760,lng:72.8777,region:'mumbai'},8:{lat:24.9164,lng:79.5910,region:'madhya'},9:{lat:32.7266,lng:74.8570,region:'jammu'},10:{lat:28.3543,lng:76.9398,region:'haryana'},
+11:{lat:28.6229,lng:77.2140,region:'delhi'},12:{lat:28.6289,lng:77.2410,region:'delhi'},13:{lat:28.6172,lng:77.2137,region:'delhi'},14:{lat:28.6270,lng:77.2165,region:'delhi'},15:{lat:28.6200,lng:77.2200,region:'delhi'},16:{lat:28.6470,lng:77.2290,region:'delhi'},17:{lat:30.7046,lng:76.7179,region:'punjab'},18:{lat:28.6015,lng:77.2175,region:'delhi'}
+};
+const MAP_SCOPES={
+  india:{label:'India',bounds:[67,6.3,98.7,37.5]},
+  delhi:{label:'Delhi',bounds:[76.94,28.48,77.34,28.78]},
+  mumbai:{label:'Mumbai',bounds:[72.72,18.88,73.02,19.28]},
+  punjab:{label:'Punjab / Mohali',bounds:[76.48,30.50,76.92,30.90]},
+  haryana:{label:'Haryana / Manesar',bounds:[76.72,28.15,77.18,28.56]},
+  madhya:{label:'Madhya Pradesh / Chhatarpur',bounds:[79.30,24.68,79.88,25.18]},
+  jammu:{label:'Jammu & Kashmir / Ladakh',bounds:[72.4,31.8,80.9,37.4]}
+};
+/* Natural Earth 1:110m India outline, embedded so the map works offline/local too. */
+const INDIA_OUTLINE=[[97.327114,28.261583],[97.402561,27.882536],[97.051989,27.699059],[97.133999,27.083774],[96.419366,27.264589],[95.124768,26.573572],[95.155153,26.001307],[94.603249,25.162495],[94.552658,24.675238],[94.106742,23.850741],[93.325188,24.078556],[93.286327,23.043658],[93.060294,22.703111],[93.166128,22.27846],[92.672721,22.041239],[92.146035,23.627499],[91.869928,23.624346],[91.706475,22.985264],[91.158963,23.503527],[91.46773,24.072639],[91.915093,24.130414],[92.376202,24.976693],[91.799596,25.147432],[90.872211,25.132601],[89.920693,25.26975],[89.832481,25.965082],[89.355094,26.014407],[88.563049,26.446526],[88.209789,25.768066],[88.931554,25.238692],[88.306373,24.866079],[88.084422,24.501657],[88.69994,24.233715],[88.52977,23.631142],[88.876312,22.879146],[89.031961,22.055708],[88.888766,21.690588],[88.208497,21.703172],[86.975704,21.495562],[87.033169,20.743308],[86.499351,20.151638],[85.060266,19.478579],[83.941006,18.30201],[83.189217,17.671221],[82.192792,17.016636],[82.191242,16.556664],[81.692719,16.310219],[80.791999,15.951972],[80.324896,15.899185],[80.025069,15.136415],[80.233274,13.835771],[80.286294,13.006261],[79.862547,12.056215],[79.857999,10.357275],[79.340512,10.308854],[78.885345,9.546136],[79.18972,9.216544],[78.277941,8.933047],[77.941165,8.252959],[77.539898,7.965535],[76.592979,8.899276],[76.130061,10.29963],[75.746467,11.308251],[75.396101,11.781245],[74.864816,12.741936],[74.616717,13.992583],[74.443859,14.617222],[73.534199,15.990652],[73.119909,17.92857],[72.820909,19.208234],[72.824475,20.419503],[72.630533,21.356009],[71.175273,20.757441],[70.470459,20.877331],[69.16413,22.089298],[69.644928,22.450775],[69.349597,22.84318],[68.176645,23.691965],[68.842599,24.359134],[71.04324,24.356524],[70.844699,25.215102],[70.282873,25.722229],[70.168927,26.491872],[69.514393,26.940966],[70.616496,27.989196],[71.777666,27.91318],[72.823752,28.961592],[73.450638,29.976413],[74.42138,30.979815],[74.405929,31.692639],[73.950000,32.250000],[73.350000,33.150000],[72.750000,34.050000],[72.650000,34.900000],[73.150000,35.550000],[74.050000,35.950000],[74.950000,36.450000],[75.850000,36.900000],[76.750000,37.180000],[77.650000,37.080000],[78.450000,36.750000],[79.150000,36.200000],[79.850000,35.800000],[80.450000,35.900000],[80.750000,35.250000],[80.500000,34.550000],[80.100000,33.950000],[79.650000,33.300000],[79.208892,32.994395],[79.176129,32.48378],[78.458446,32.618164],[78.738894,31.515906],[79.721367,30.882715],[81.111256,30.183481],[80.476721,29.729865],[80.088425,28.79447],[81.057203,28.416095],[81.999987,27.925479],[83.304249,27.364506],[84.675018,27.234901],[85.251779,26.726198],[86.024393,26.630985],[87.227472,26.397898],[88.060238,26.414615],[88.174804,26.810405],[88.043133,27.445819],[88.120441,27.876542],[88.730326,28.086865],[88.814248,27.299316],[88.835643,27.098966],[89.744528,26.719403],[90.373275,26.875724],[91.217513,26.808648],[92.033484,26.83831],[92.103712,27.452614],[91.696657,27.771742],[92.503119,27.896876],[93.413348,28.640629],[94.56599,29.277438],[95.404802,29.031717],[96.117679,29.452802],[96.586591,28.83098],[96.248833,28.411031],[97.327114,28.261583]];
+const LOCAL_SHAPES={
+ delhi:'M265 95 L520 70 L730 150 L815 315 L760 525 L555 590 L325 545 L190 390 L225 210 Z',
+ mumbai:'M440 55 L600 100 L650 215 L615 335 L670 475 L595 595 L435 565 L395 430 L420 300 L385 180 Z',
+ punjab:'M245 160 L405 75 L650 100 L805 235 L735 430 L560 565 L335 520 L185 360 Z',
+ haryana:'M310 90 L580 80 L760 200 L710 365 L800 505 L550 585 L315 525 L205 315 Z',
+ madhya:'M150 240 L300 105 L575 80 L820 190 L855 390 L690 545 L410 585 L175 455 Z',
+ jammu:'M210 250 L310 115 L505 60 L700 120 L820 270 L735 440 L530 575 L325 505 Z'
+};
+const REGION_ANCHORS={delhi:{lat:28.6139,lng:77.2090},mumbai:{lat:19.0760,lng:72.8777},punjab:{lat:30.7046,lng:76.7179},haryana:{lat:28.3543,lng:76.9398},madhya:{lat:24.9164,lng:79.5910},jammu:{lat:34.4500,lng:76.7000}};
+const REGION_LABEL_OFFSETS={delhi:'align-left',mumbai:'',punjab:'align-left',haryana:'',madhya:'',jammu:'align-left'};
+let HOME_MAP_SCOPE='india',FULL_MAP_SCOPE='india',HOME_PREVIEW_POINT=null;
+function inferPoint(location,area=''){
+  const v=(String(location||'')+' '+String(area||'')).toLowerCase();
+  if(/mumbai|bombay/.test(v))return {lat:19.0760,lng:72.8777,region:'mumbai'};
+  if(/mohali|punjab|chandigarh/.test(v))return {lat:30.7046,lng:76.7179,region:'punjab'};
+  if(/manesar|gurugram|gurgaon|haryana/.test(v))return {lat:28.3543,lng:76.9398,region:'haryana'};
+  if(/chhatarpur|panna|madhya/.test(v))return {lat:24.9164,lng:79.5910,region:'madhya'};
+  if(/jammu|kashmir/.test(v))return {lat:32.7266,lng:74.8570,region:'jammu'};
+  if(/jantar|janpath|patel chowk|ito|shastri|red fort|lal qila|mandi house|abdul kalam|new delhi|delhi|burari|lodhi|kashmere|ashoka road|parliament/.test(v))return {lat:28.6139,lng:77.2090,region:'delhi'};
+  return null;
+}
+function recordPoint(r){return MAP_POINTS[r.id]||inferPoint(r.location,r.area)}
+function scopeRecords(scope){return RECORDS.filter(r=>{const p=recordPoint(r);return p&&(scope==='india'||p.region===scope)})}
+function setMapControls(targetId,scope){$$(`[data-map-target="${targetId}"]`).forEach(b=>b.classList.toggle('active',b.dataset.mapScope===scope))}
+function projectPoint(lat,lng,bounds){const [minLng,minLat,maxLng,maxLat]=bounds,pad=62,w=1000,h=650;const x=pad+((lng-minLng)/(maxLng-minLng))*(w-pad*2);const y=pad+((maxLat-lat)/(maxLat-minLat))*(h-pad*2);return{x:Math.max(pad,Math.min(w-pad,x)),y:Math.max(pad,Math.min(h-pad,y))}}
+function gridSvg(){let s='';for(let x=80;x<1000;x+=100)s+=`<line class="archive-map-grid" x1="${x}" y1="0" x2="${x}" y2="650"/>`;for(let y=75;y<650;y+=75)s+=`<line class="archive-map-grid" x1="0" y1="${y}" x2="1000" y2="${y}"/>`;return s}
+function indiaPath(){const b=MAP_SCOPES.india.bounds;return INDIA_OUTLINE.map(([lng,lat],i)=>{const p=projectPoint(lat,lng,b);return `${i?'L':'M'}${p.x.toFixed(1)} ${p.y.toFixed(1)}`}).join(' ')+' Z'}
+function shortPlace(s){const v=String(s||'').split('/')[0].trim();return v.length>28?v.slice(0,25)+'…':v}
+function regionalGroups(scope){const groups={};scopeRecords(scope).forEach(r=>{const p=recordPoint(r);const key=`${p.lat.toFixed(3)}|${p.lng.toFixed(3)}|${shortPlace(r.location)}`;(groups[key]??={p,records:[]}).records.push(r)});return Object.values(groups)}
+function nudgePositions(items){const placed=[];return items.map((g,i)=>{let {x,y}=projectPoint(g.p.lat,g.p.lng,MAP_SCOPES[g.p.region].bounds);let tries=0;while(placed.some(q=>Math.hypot(q.x-x,q.y-y)<74)&&tries<18){const a=(i*1.9+tries*1.35),rad=38+tries*12;x+=Math.cos(a)*rad;y+=Math.sin(a)*rad;x=Math.max(90,Math.min(910,x));y=Math.max(90,Math.min(560,y));tries++}placed.push({x,y});return {...g,x,y}})}
+function renderArchiveMap(targetId,scope='india',preview=null){
+  const el=document.getElementById(targetId);if(!el)return;const cfg=MAP_SCOPES[scope]||MAP_SCOPES.india;setMapControls(targetId,scope);
+  let svg=`<svg viewBox="0 0 1000 650" role="img" aria-label="${escapeHTML(cfg.label)} archive map"><rect class="archive-map-bg" width="1000" height="650"/>${gridSvg()}`;
+  if(scope==='india')svg+=`<path class="archive-map-country" d="${indiaPath()}"/><text class="archive-map-big-label" x="505" y="355" text-anchor="middle">INDIA</text><text class="archive-map-kicker" x="500" y="620" text-anchor="middle">CLICK A CITY / REGION TO SEE ITS RECORDS</text>`;
+  else svg+=`<path class="archive-map-local-shape" d="${LOCAL_SHAPES[scope]||LOCAL_SHAPES.delhi}"/><text class="archive-map-big-label" x="500" y="345" text-anchor="middle">${escapeHTML(cfg.label.toUpperCase())}</text><text class="archive-map-kicker" x="500" y="610" text-anchor="middle">APPROXIMATE SIGHTING LOCATIONS</text>`;
+  svg+='</svg>';
+  let overlays=`<div class="archive-map-status">${escapeHTML(cfg.label)} · ${scopeRecords(scope).length} record${scopeRecords(scope).length===1?'':'s'}</div><div class="archive-map-legend">● Green = verified<br>● Amber = corroborated<br>● Pink = unreviewed<br>● Yellow = context</div>`;
+  if(scope==='india'){
+    for(const [key,a] of Object.entries(REGION_ANCHORS)){const recs=scopeRecords(key);if(!recs.length)continue;const p=projectPoint(a.lat,a.lng,MAP_SCOPES.india.bounds);overlays+=`<button type="button" class="archive-map-cluster ${REGION_LABEL_OFFSETS[key]||''}" style="left:${(p.x/10).toFixed(2)}%;top:${(p.y/6.5).toFixed(2)}%" data-map-target="${targetId}" data-map-scope="${key}" aria-label="Zoom to ${escapeHTML(MAP_SCOPES[key].label)}, ${recs.length} records"><span class="archive-map-cluster-dot">${recs.length}</span><span class="archive-map-cluster-label">${escapeHTML(MAP_SCOPES[key].label)} · ${recs.length}</span></button>`}
+  } else {
+    const groups=nudgePositions(regionalGroups(scope));
+    groups.forEach((g,i)=>{const first=g.records[0],count=g.records.length,align=g.x>690?'align-left':'',lab=count>1?`${shortPlace(first.location)} · ${count} records`:shortPlace(first.location);overlays+=`<button type="button" class="archive-map-pin ${escapeHTML(first.level||'unreviewed')} ${align}" style="left:${(g.x/10).toFixed(2)}%;top:${(g.y/6.5).toFixed(2)}%" data-area-record="${escapeHTML(first.id)}" aria-label="${escapeHTML(lab)}"><span class="archive-map-pin-dot">${String(i+1).padStart(2,'0')}</span><span class="archive-map-pin-label">${escapeHTML(lab)}</span></button>`});
+    if(!groups.length)overlays+='<div class="archive-map-empty">No mapped records in this view yet.</div>';
+  }
+  if(preview){const p=projectPoint(preview.lat,preview.lng,MAP_SCOPES[preview.region]?.bounds||cfg.bounds);overlays+=`<div class="archive-map-preview" style="left:${(p.x/10).toFixed(2)}%;top:${(p.y/6.5).toFixed(2)}%" title="Approximate submitted area"></div>`}
+  el.innerHTML=svg+overlays;
+}
+function previewLocation(value){const p=inferPoint(value);HOME_PREVIEW_POINT=p;if(!p){HOME_MAP_SCOPE='india';renderArchiveMap('homeSightingsMap','india');return}HOME_MAP_SCOPE=p.region;renderArchiveMap('homeSightingsMap',p.region,p)}
+
+
+const slugLevel=l=>l==='context'?'context':l;
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove('show'),2600)}
+function download(name,text,type='text/plain'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.appendChild(a);a.click();URL.revokeObjectURL(a.href);a.remove()}
+function card(r){const bus=r.fleet_number?`Bus: ${escapeHTML(r.fleet_number)}`:'Bus number: not confirmed';return `<article class="archive-card"><div class="card-top"><div class="chiprow"><span class="chip ${slugLevel(r.level)}">${escapeHTML(r.level)}</span><span class="chip">${escapeHTML(r.purpose)}</span></div><div class="card-title"><h3>${escapeHTML(r.title)}</h3></div></div><div class="card-body"><div class="meta"><span>${escapeHTML(formatDate(r.date))}</span><span>${bus}</span><span>Location spotted: ${escapeHTML(r.location)}</span><span>${escapeHTML(r.area||'India')}</span></div><div class="excerpt">${escapeHTML(r.summary)}</div><div class="card-footer"><span>${escapeHTML(r.operator)}</span><span>${escapeHTML(r.source)}</span></div><div class="card-actions"><a class="button small yellow" href="#record/${r.id}">Open record</a><a class="button small ghost" href="${escapeHTML(r.sourceUrl)}" target="_blank" rel="noopener">Source ↗</a></div></div></article>`}
+function stats(){return {total:RECORDS.length,years:new Set(RECORDS.map(r=>r.date.slice(0,4))).size,operators:new Set(RECORDS.map(r=>r.operator)).size}}
+function renderHome(){$('#homeCards').innerHTML=[...RECORDS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6).map(card).join('')}
+function populateFilters(){const years=[...new Set(RECORDS.map(r=>r.date.slice(0,4)))].sort((a,b)=>b-a);$('#yearFilter').innerHTML='<option value="">All years</option>'+years.map(y=>`<option>${y}</option>`).join('');const ops=[...new Set(RECORDS.map(r=>r.operator))].sort();$('#operatorFilter').innerHTML='<option value="">All operators</option>'+ops.map(o=>`<option value="${escapeHTML(o)}">${escapeHTML(o)}</option>`).join('')}
+function filteredRecords(){const q=$('#searchInput').value.trim().toLowerCase(),year=$('#yearFilter').value,op=$('#operatorFilter').value,level=$('#levelFilter').value,sort=$('#sortFilter').value;let rows=RECORDS.filter(r=>{const blob=[r.title,r.location,r.area,r.operator,r.purpose,r.source,r.summary].join(' ').toLowerCase();return(!q||blob.includes(q))&&(!year||r.date.startsWith(year))&&(!op||r.operator===op)&&(!level||r.level===level)});rows.sort((a,b)=>sort==='oldest'?a.date.localeCompare(b.date):sort==='place'?a.location.localeCompare(b.location):b.date.localeCompare(a.date));return rows}
+function renderArchive(){const rows=filteredRecords();$('#archiveCount').textContent=`${rows.length} record${rows.length===1?'':'s'}`;$('#archiveCards').innerHTML=rows.length?rows.map(card).join(''):'<div class="empty">No records match those filters. Try clearing one or more filters.</div>'}
+function resetFilters(){['searchInput','yearFilter','operatorFilter','levelFilter'].forEach(id=>$('#'+id).value='');$('#sortFilter').value='newest';renderArchive()}
+function exportRecords(kind){const rows=filteredRecords();if(kind==='json'){download('moat-detention-bus-archive.json',JSON.stringify(rows,null,2),'application/json');return}const fields=['id','title','date','location','area','operator','purpose','level','source','sourceUrl','summary'];const csv=[fields.join(','),...rows.map(r=>fields.map(f=>'"'+String(r[f]??'').replaceAll('"','""')+'"').join(','))].join('\n');download('moat-detention-bus-archive.csv',csv,'text/csv')}
+function renderRecord(id){const r=RECORDS.find(x=>String(x.id)===String(id));if(!r){$('#recordContent').innerHTML='<div class="empty">Record not found. <a href="#archive">Return to archive</a>.</div>';return}$('#recordContent').innerHTML=`<a class="text-link" href="#archive">← Back to archive</a><div class="detail-layout"><div class="detail-main"><span class="page-kicker impact">${r.community?'COMMUNITY RECORD':'RECORD '+r.id.toString().padStart(3,'0')}</span><h2>${escapeHTML(r.title)}</h2><p class="detail-summary">${escapeHTML(r.summary)}</p><div class="fact-grid"><div class="fact"><b>Date</b><span>${escapeHTML(formatDate(r.date))}</span></div><div class="fact"><b>Bus / fleet number</b><span>${escapeHTML(r.fleet_number||'Not confirmed')}</span></div><div class="fact"><b>Location spotted</b><span>${escapeHTML(r.location)}</span></div><div class="fact"><b>Area</b><span>${escapeHTML(r.area)}</span></div><div class="fact"><b>Operator</b><span>${escapeHTML(r.operator)}</span></div><div class="fact"><b>Use</b><span>${escapeHTML(r.purpose)}</span></div><div class="fact"><b>Evidence level</b><span>${escapeHTML(r.level)}</span></div></div><div class="record-note"><h3>Evidence note</h3><p>${escapeHTML(r.evidence)}</p></div><div class="action-row"><button class="button yellow" data-copy-record="${r.id}">Copy citation</button><button class="button" data-correct-record="${r.id}">Suggest a correction</button></div></div><aside class="source-box"><h3>Original source</h3><p><b>${escapeHTML(r.source)}</b></p><p>${escapeHTML(r.sourceUrl)}</p><a class="button red" href="${escapeHTML(r.sourceUrl)}" target="_blank" rel="noopener">Open source ↗</a><p style="margin-top:16px">This archive distinguishes documented records from unreviewed community reports. Original source material remains the evidentiary reference.</p></aside></div>`}
+function renderMap(){
+  const rows=scopeRecords(FULL_MAP_SCOPE).sort((a,b)=>b.date.localeCompare(a.date));
+  renderArchiveMap('fullSightingsMap',FULL_MAP_SCOPE);
+  $('#mapRecordList').innerHTML=`<div class="map-region-title">${escapeHTML(MAP_SCOPES[FULL_MAP_SCOPE]?.label||'India')} · ${rows.length} record${rows.length===1?'':'s'}</div>`+rows.map(r=>`<button class="map-record-row" data-area-record="${escapeHTML(r.id)}" style="text-align:left;cursor:pointer"><strong>${escapeHTML(r.location)}</strong><span>${r.fleet_number?`Bus ${escapeHTML(r.fleet_number)} · `:''}${escapeHTML(formatDate(r.date))} · ${escapeHTML(r.purpose)} · ${escapeHTML(r.level)}</span></button>`).join('');
+  const allMapped=scopeRecords('india');
+  $('#areaSummary').innerHTML=`<div class="area-stat"><strong>${allMapped.length}</strong><span>mapped India records</span></div><div class="area-stat"><strong>${scopeRecords('delhi').length}</strong><span>Delhi records</span></div><div class="area-stat"><strong>${scopeRecords('mumbai').length}</strong><span>Mumbai records</span></div><div class="area-stat"><strong>${new Set(allMapped.map(r=>recordPoint(r)?.region).filter(Boolean)).size}</strong><span>mapped regions</span></div>`;
+  const groups={};allMapped.forEach(r=>{const p=recordPoint(r);const key=p?.region||'other';(groups[key]??=[]).push(r)});
+  $('#areaIndex').innerHTML=Object.entries(groups).map(([key,recs])=>`<article class="area-card"><h3>${escapeHTML(MAP_SCOPES[key]?.label||key)}</h3><p>${recs.length} mapped record${recs.length===1?'':'s'}.</p><div class="area-records"><button class="area-pill" data-map-target="fullSightingsMap" data-map-scope="${escapeHTML(key)}">Zoom here</button>${recs.slice(0,4).map(r=>`<button class="area-pill" data-area-record="${escapeHTML(r.id)}">${escapeHTML(r.location)} · ${r.date.slice(0,4)}</button>`).join('')}</div></article>`).join('');
+}
+function route(){let hash=location.hash.replace(/^#/,'')||'home';let [name,arg]=hash.split('/');if(name==='record'){showView('record');renderRecord(arg)}else if(['home','archive','map','method','about','report'].includes(name)){showView(name);if(name==='archive')renderArchive();if(name==='map')renderMap();}else{showView('home')}window.scrollTo({top:0,behavior:'instant'})}
+function showView(name){$$('.view').forEach(v=>v.classList.remove('active'));$('#view-'+name).classList.add('active');$$('[data-route]').forEach(a=>a.removeAttribute('aria-current'));const nav=$(`[data-route="${name}"]`);if(nav)nav.setAttribute('aria-current','page');$('#siteNav').classList.remove('open');$('#menuButton').setAttribute('aria-expanded','false');$('#menuButton').textContent='MENU'}
+function citation(r){return `${r.title}. MOAT Detention Bus Archive. ${formatDate(r.date)}. Source: ${r.source} — ${r.sourceUrl}`}
+async function copyText(t){try{await navigator.clipboard.writeText(t);toast('Copied to clipboard')}catch{const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Copied to clipboard')}}
+
+let BACKEND=null;
+function backendReady(){
+  const cfg=window.MOAT_BACKEND||{};
+  return Boolean(window.supabase && cfg.supabaseUrl && cfg.supabaseAnonKey && !cfg.supabaseUrl.includes('YOUR_'));
+}
+function getBackend(){
+  if(BACKEND)return BACKEND;
+  if(!backendReady())return null;
+  BACKEND=window.supabase.createClient(window.MOAT_BACKEND.supabaseUrl,window.MOAT_BACKEND.supabaseAnonKey,{auth:{persistSession:false}});
+  return BACKEND;
+}
+function safeFileName(name){return String(name||'evidence').replace(/[^a-zA-Z0-9._-]+/g,'-').slice(-120)}
+function communityRecord(row){
+  const id='community-'+row.id,o=MODERATION_OVERRIDES[id]||{};
+  if(o.hidden)return null;
+  const created=row.created_at?new Date(row.created_at):null;
+  const level=o.level||row.evidence_level||'unreviewed';
+  const expired=created&&((Date.now()-created.getTime())>8*24*60*60*1000);
+  if(expired&&level==='unreviewed')return null;
+  return {id,title:o.title||row.public_title||`Reported bus sighting at ${row.location_name}`,date:o.date||row.observed_date,location:o.location||row.location_name,area:o.area||row.area||'Community submission',operator:o.operator||row.operator||'Unknown / not established',fleet_number:o.fleet_number||row.fleet_number||'',purpose:o.purpose||row.purpose||'Reported detention-related context',level,source:o.source||row.source_name||'Community report',sourceUrl:o.sourceUrl||row.source_url||'#report',summary:o.summary||row.public_summary||`A community member reported a bus in a detention-related context near ${row.location_name}. This report has not yet been independently verified by MOAT.`,evidence:o.evidence||row.evidence_note||'Community-supplied report. Original evidence, when provided, is retained privately for later review.',community:true,created_at:row.created_at};
+}
+async function loadPublicSubmissions(){
+  const db=getBackend();if(!db)return;
+  try{
+    const {data,error}=await db.from('public_sightings').select('*').order('observed_date',{ascending:false});
+    if(error)throw error;
+    for(let i=RECORDS.length-1;i>=0;i--)if(RECORDS[i].community)RECORDS.splice(i,1);
+    for(const row of (data||[])){const rec=communityRecord(row);if(rec)RECORDS.push(rec)}
+    populateFilters();renderHome();renderArchive();renderArchiveMap('homeSightingsMap',HOME_MAP_SCOPE,HOME_PREVIEW_POINT);renderMap();
+  }catch(err){console.warn('Could not load public community submissions',err)}
+}
+async function submitReport(e){
+  e.preventDefault();
+  const form=e.currentTarget,msg=form.querySelector('[data-form-message]')||$('#formMessage'),btn=form.querySelector('button[type="submit"]');
+  msg.className='form-message';btn.disabled=true;const original=btn.textContent;btn.textContent='Submitting…';
+  const db=getBackend();
+  if(!db){msg.textContent='Live submissions are not connected yet on this copy of the site.';msg.classList.add('show','error');btn.disabled=false;btn.textContent=original;return}
+  try{
+    const fd=new FormData(form);const file=form.querySelector('input[type="file"]')?.files?.[0]||null;
+    let evidencePath=null,evidenceName=null,evidenceType=null;
+    if(file){
+      if(file.size>25*1024*1024)throw new Error('Please keep photo/video uploads under 25 MB.');
+      const folder=(crypto.randomUUID?crypto.randomUUID():Date.now().toString(36));
+      evidencePath=`pending/${folder}/${safeFileName(file.name)}`;evidenceName=file.name;evidenceType=file.type||null;
+      const {error:uploadError}=await db.storage.from('detention-evidence').upload(evidencePath,file,{upsert:false,contentType:file.type||undefined});
+      if(uploadError)throw uploadError;
+    }
+    const payload={
+      observed_date:fd.get('observed_date'),location_name:String(fd.get('location_name')||'').trim(),operator:String(fd.get('operator')||'').trim()||null,
+      fleet_number:String(fd.get('fleet_number')||'').trim()||null,description:String(fd.get('description')||'').trim(),source_url:String(fd.get('source_url')||'').trim()||null,
+      source_name:String(fd.get('source_name')||'').trim()||null,contact:String(fd.get('contact')||'').trim()||null,related_record:String(fd.get('related_record')||'').trim()||null,
+      evidence_path:evidencePath,evidence_original_name:evidenceName,evidence_mime_type:evidenceType,status:'pending',
+      public_title:`Reported bus sighting at ${String(fd.get('location_name')||'').trim()}`,
+      public_summary:`A community member reported a bus in a detention-related context near ${String(fd.get('location_name')||'').trim()}. This report has not yet been independently verified by MOAT.`,
+      purpose:'Reported detention-related context'
+    };
+    if(!payload.observed_date||!payload.location_name||!payload.description)throw new Error('Please add the date, location and a short description.');if(payload.description.length<8)throw new Error('Please add a little more detail about what you saw.');
+    if(!file && !payload.source_url && !payload.fleet_number)throw new Error('Please add at least one supporting element: a photo/video, source link, or bus/fleet number.');
+    const {error}=await db.from('sightings').insert(payload);if(error)throw error;
+    const isCorrection=Boolean(payload.related_record);
+    msg.textContent=isCorrection?'Correction request received and linked to the original record. It will not create a second public sighting.':'Report published as an UNREVIEWED COMMUNITY REPORT. It may take a moment to appear on the live map. Uploaded evidence and contact details remain private.';msg.classList.add('show','success');form.reset();if(!isCorrection)setTimeout(loadPublicSubmissions,500);
+    const related=form.querySelector('[name="related_record"]');if(related)related.value='';previewLocation('');toast(isCorrection?'Correction received':'Report received');
+  }catch(err){msg.textContent=err?.message||'Could not submit this report. Please try again.';msg.classList.add('show','error')}
+  finally{btn.disabled=false;btn.textContent=original}
+}
+function correction(id){const r=RECORDS.find(x=>String(x.id)===String(id));location.hash='report';setTimeout(()=>{$('#relatedRecord').value=String(id);$('#reportWhat').value=`Correction for record ${id}: ${r.title}\n\n`;$('#reportLocation').value=r.location;$('#reportDate').value=r.date;$('#reportSource').value=r.sourceUrl;$('#reportSourceName').value=r.source;$('#reportWhat').focus()},60)}
+
+$('#menuButton').addEventListener('click',()=>{const open=$('#siteNav').classList.toggle('open');$('#menuButton').setAttribute('aria-expanded',String(open));$('#menuButton').textContent=open?'CLOSE':'MENU'});
+['searchInput','yearFilter','operatorFilter','levelFilter','sortFilter'].forEach(id=>$('#'+id).addEventListener(id==='searchInput'?'input':'change',renderArchive));
+$('#resetFilters').addEventListener('click',resetFilters);$('#exportCsv').addEventListener('click',()=>exportRecords('csv'));$('#exportJson').addEventListener('click',()=>exportRecords('json'));$('#reportForm').addEventListener('submit',submitReport);$('#homeReportForm').addEventListener('submit',submitReport);$('#homeReportLocation').addEventListener('input',e=>previewLocation(e.target.value));
+document.addEventListener('click',async e=>{const copy=e.target.closest('[data-copy-record]');if(copy){const r=RECORDS.find(x=>String(x.id)===String(copy.dataset.copyRecord));if(r)copyText(citation(r))}const corr=e.target.closest('[data-correct-record]');if(corr)correction(corr.dataset.correctRecord);const area=e.target.closest('[data-area-record]');if(area)location.hash='record/'+area.dataset.areaRecord;const scope=e.target.closest('[data-map-scope]');if(scope){const target=scope.dataset.mapTarget||'fullSightingsMap',key=scope.dataset.mapScope||'india';if(target==='fullSightingsMap'){FULL_MAP_SCOPE=key;renderMap()}else{HOME_MAP_SCOPE=key;renderArchiveMap(target,key)}}});
+window.addEventListener('hashchange',route);
+populateFilters();renderHome();renderArchive();renderArchiveMap('homeSightingsMap',HOME_MAP_SCOPE,HOME_PREVIEW_POINT);renderMap();route();loadPublicSubmissions();
+</script>
+</body>
+</html>
